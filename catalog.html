@@ -27,9 +27,9 @@
                 <li><a href="#" class="breadcrumps__link">Главная</a></li>
                 <li><a href="#" class="breadcrumps__link">Гостиницы</a></li>
             </ul>
-            <form class="filter" action="https://echo.htmlacademy.ru">
+            <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter-group">
-                    <p class="filter-group__heading">Инфраструктура:</p>
+                    <legend class="filter-group__heading">Инфраструктура:</legend>
                     <label for="pool">Бассейн</label>
                     <input type="checkbox" id="pool" name="pool">
                     <label for="parking">Парковка</label>
@@ -38,19 +38,18 @@
                     <input type="checkbox" name="wifi" id="wifi">
                 </fieldset>
                 <fieldset class="filter-group">
-                   <p class="filter-group__heading">Тип жилья:</p>
+                   <legend class="filter-group__heading">Тип жилья:</legend>
                         <label for="hostel">Гостиница</label>
-                        <input type="radio" id="hostel" name="hostel">
+                        <input type="radio" id="hostel" name="type" value="hostel">
                         <label for="motel">Мотель</label>
-                        <input type="radio" name="motel" id="motel">
+                        <input type="radio" name="type" id="motel" value="motel">
                         <label for="aparts">Апартаменты</label>
-                        <input type="radio" name="aparts" id="aparts">
+                        <input type="radio" name="type" id="aparts" value="aparts">
                 </fieldset>
                 <fieldset class="filter-group">
-                    <p class="filter-group__heading">Стоимость, ₽:</p>
+                    <legend class="filter-group__heading">Стоимость, ₽:</legend>
                     <input type="number" placeholder="От" name="form">
                     <input type="number" placeholder="До" name="under">
-                    <input type="range" name="range">
                 </fieldset>
                 <fieldset class="filter-group">
                     <input type="submit" value="Применить">
