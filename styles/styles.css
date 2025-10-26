@@ -25,11 +25,13 @@ ul {
     font-size:30px;
     line-height: 36px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 .head3 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 .heading-text {
     font-size: 22px;
@@ -42,6 +44,12 @@ ul {
     line-height: 21px;
     font-weight: 400;
     color: #333333;
+}
+.card-text-white {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #fff;
 }
 .head4 {
     font-size: 20px;
@@ -57,6 +65,13 @@ a.head4 {
     color: #000;
     font-weight: 400;
     font-style: normal;
+}
+.phone-num:hover, .phone-num:focus {
+    color: #756157;
+    outline: none;
+}
+.phone-num:active {
+    color: rgba(117, 97, 87, 0.3);
 }
 .btn {
     border-radius: 4px;
@@ -163,6 +178,7 @@ input[type="text"] {
 }
 .about-list__card:first-child, .about-list__card:last-child {
     background-color: #82B3D3;
+    color: white;
 }
 .about-list__card:nth-child(3), .about-list__card:nth-child(5) {
     background-color: rgba(131, 179, 211, 0.12);
@@ -186,4 +202,11 @@ input[type="text"] {
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
+    text-transform: uppercase;
+}
+.advantages-list__card:first-child, .advantages-list__card:last-child {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+.list-item h3 {
+    text-transform: none;
 }
