@@ -1,0 +1,212 @@
+@font-face {
+        font-family: "PT Sans";
+        src: url("../fonts/ptsans-400.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        
+}
+@font-face {
+        font-family: "PT Sans";
+        src: url("../fonts/ptsans-700.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 700;
+}
+body {
+   font-family: "PT Sans", sans-serif;
+   color: #000;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.head2 {
+    font-size:30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.head3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.heading-text {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #333333;
+}
+.card-text {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #333333;
+}
+.card-text-white {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #fff;
+}
+.head4 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+a.head4 {
+    color: #000;
+}
+.phone-num {
+    font-size: 40px;
+    line-height: 40px;
+    color: #000;
+    font-weight: 400;
+    font-style: normal;
+}
+.phone-num:hover, .phone-num:focus {
+    color: #756157;
+    outline: none;
+}
+.phone-num:active {
+    color: rgba(117, 97, 87, 0.3);
+}
+.btn {
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+}
+.btn:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+.btn:disabled {
+    background-color: #E5E5E5;
+}
+.btn-basic {
+    background-color: #756157;
+}
+.btn-basic:hover {
+    background-color: #615048;
+}
+.btn-extra {
+    background-color: #82B3D3;
+}
+.btn-extra:hover {
+    background-color: #68A2CA;
+}
+.btn-selected {
+    background-color: #7DB54F;
+}
+.btn-selected:hover {
+    background-color: #6C9E42;
+}
+.btn-transparent {
+    background: none;
+}
+.entry-banner {
+    background-color: #656565;
+    background-image: url("../images/index-background.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.suggests__section-subscribe {
+    background-color: #756157;
+    background-image: url("../images/subscribe-bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.suggests__section-subscribe p, .suggests__section-subscribe h3 {
+    color: #fff;
+}
+.about-text {
+    text-align: center;
+}
+.suggests__section-motel {
+    text-align: center;
+}
+.advantages-text {
+    text-align: center;
+}
+
+input[type="text"] {
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 24px;
+}
+.heading__btn-search, .heading__btn-fav {
+    position: relative;
+}
+
+/* Иконки для кнопок в навигации */
+/* .heading__btn-search::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/search.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.heading__btn-fav::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/heart.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+} */
+.about-list__card {
+    text-align: center;
+}
+.about-list__card:first-child, .about-list__card:last-child {
+    background-color: #82B3D3;
+    color: white;
+}
+.about-list__card:nth-child(3), .about-list__card:nth-child(5) {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+.about-list__card:nth-child(4) {
+    background-color: rgba(131, 179, 211, 0.2);
+}
+.filter-section {
+    background-image: url("../images/filter-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #656565;
+    color: #fff;
+}
+.chekbox-text { 
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+}
+.btn-normal {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.advantages-list__card:first-child, .advantages-list__card:last-child {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+.list-item h3 {
+    text-transform: none;
+}
