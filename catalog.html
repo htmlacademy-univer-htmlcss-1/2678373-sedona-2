@@ -33,26 +33,46 @@
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter-group">
                     <legend class="filter-group__heading head4">Инфраструктура:</legend>
-                    <label for="pool" class="chekbox-text">Бассейн</label>
-                    <input type="checkbox" id="pool" name="pool">
-                    <label for="parking" class="chekbox-text">Парковка</label>
-                    <input type="checkbox" name="parking" id="parking">
-                    <label for="wifi" class="chekbox-text">Wi-Fi</label>
-                    <input type="checkbox" name="wifi" id="wifi">
+                    <ul class="options-list">
+                        <li>
+                            <label for="pool" class="chekbox-text">Бассейн</label>
+                            <input type="checkbox" id="pool" name="pool">
+                        </li>
+                        <li>
+                            <label for="parking" class="chekbox-text">Парковка</label>
+                            <input type="checkbox" name="parking" id="parking">
+                        </li>
+                        <li>
+                            <label for="wifi" class="chekbox-text">Wi-Fi</label>
+                            <input type="checkbox" name="wifi" id="wifi">
+                        </li>
+                    </ul>
+
                 </fieldset>
                 <fieldset class="filter-group">
                    <legend class="filter-group__heading head4">Тип жилья:</legend>
-                        <label for="hostel" class="chekbox-text">Гостиница</label>
-                        <input type="radio" id="hostel" name="type" value="hostel">
-                        <label for="motel" class="chekbox-text">Мотель</label>
-                        <input type="radio" name="type" id="motel" value="motel">
-                        <label for="aparts" class="chekbox-text">Апартаменты</label>
-                        <input type="radio" name="type" id="aparts" value="aparts">
+                        <ul class="options-list">
+                            <li>
+                                <label for="hostel" class="chekbox-text">Гостиница</label>
+                                <input type="radio" id="hostel" name="type" value="hostel">
+                            </li>
+                            <li>
+                                <label for="motel" class="chekbox-text">Мотель</label>
+                                <input type="radio" name="type" id="motel" value="motel">
+                            </li>
+                            <li>
+                                <label for="aparts" class="chekbox-text">Апартаменты</label>
+                                <input type="radio" name="type" id="aparts" value="aparts">
+                            </li>
+                        </ul>
                 </fieldset>
-                <fieldset class="filter-group">
+                <fieldset class="filter-group filter-group--price">
                     <legend class="filter-group__heading head4">Стоимость, ₽:</legend>
-                    <input type="number" placeholder="От" name="form">
-                    <input type="number" placeholder="До" name="under">
+                    <ul class="options-list-buttons">   
+                        <li><input type="number" placeholder="От" name="form"></li>
+                        <li><input type="number" placeholder="До" name="under"></li>
+                    </ul>
+                    
                 </fieldset>
                 <fieldset class="filter-group">
                     <input type="submit" value="Применить" class="btn btn-extra">
