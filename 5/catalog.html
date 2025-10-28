@@ -24,7 +24,7 @@
       <li><a class="heading__btn-action btn btn-basic">Хочу сюда!</a></li>
       </ul>
     </header>
-    <main>
+    <main class="main-content">
         <section class="filter-section">
             <h1 class="filter__heading">Гостиницы Седоны</h1>
             <ul class="breadcrumps">
@@ -75,16 +75,16 @@
                     </ul>
                     
                 </fieldset>
-                <fieldset class="filter-group">
+                <div class="filter-group">
                     <input type="submit" value="Применить" class="btn btn-extra">
                     <input type="reset" value="Сбросить" class="btn btn-transparent">
-                </fieldset>
+                </div>
             </form>
         </section>
         <section class="cards-layout">
-            <header>
+            <header class="sorting-heading">
                 <h2 class="items-container__heading head2">НАЙДЕНО ГОСТИНИЦ: 38</h2>
-                <select>
+                <select class="sort-select">
                     <option>
                         Сначала дешевые
                     </option>
@@ -93,7 +93,7 @@
                     </option>
                 </select> 
                 <!--Кнопки лейаута-->
-                <ul>
+                <ul class="heading-layout-buttons">
                     <li><button>Таблица</button></li>
                     <li><button>Карточки</button></li>
                     <li><button>Список</button></li>
@@ -188,15 +188,17 @@
           </form>
         </article>
     </main>
-    <footer>
-        <h2 class="visually-hidden">Контакты</h2>
-        <h3 class="visually-hidden">Следите за последними обновлениями и поддерживайте связь с нами</h3>
-        <address class="contact-info">
-        <ul class="social-links">
+    <footer class="page-footer">
+        <div class="contact-heading">
+            <h2 class="visually-hidden">Контакты</h2>
+            <h3 class="visually-hidden">Следите за последними обновлениями и поддерживайте связь с нами</h3>
+        </div>  
+      <ul class="social-links">
           <li class="social-links__item"><a href="#">Вк</a></li>
           <li class="social-links__item"><a href="#">Телеграм</a></li>
           <li class="social-links__item"><a href="#">YouTube</a></li>
         </ul>
+      <address class="contact-info">
         <a href="tel:+78128121212" class="phone-num">+7 (812) 812-12-12</a>
       </address>
         <a href="#"><img src="./images/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="115" height="33">HTML Academy</a>

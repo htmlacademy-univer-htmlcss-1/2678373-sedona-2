@@ -19,8 +19,13 @@ html, body {
 body {
     font-family: "PT Sans", sans-serif;
     color: #000;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+}
+.main-content {
+    flex-grow: 1;
+    background-color: #fff;
 }
 a {
     text-decoration: none;
@@ -254,16 +259,17 @@ ul.about {
     width: 400px;
     height: 385px;
 }
-footer {
+.page-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0 70px;
-}
-address {
-    display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    padding: 0 70px;
+    background-color: #fff;
+}
+.contact-heading {
+    display: flex;
+    width: 100%;;
 }
 .social-links {
     display: flex;
@@ -312,4 +318,10 @@ address {
 .list-item {
     width: 340px;
     height: 438px;
+}
+.sorting-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
 }
