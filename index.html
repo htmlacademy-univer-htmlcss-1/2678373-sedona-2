@@ -23,12 +23,10 @@
       <li><a class="heading__btn-action btn btn-basic">Хочу сюда!</a></li>
       </ul>
     </header>
-    <main>
+    <main class="main-content">
       <section class="entry-banner">
-        <!--alt атрибут не рекомендован тк есть смысловая подпись h1-->
         <img src="./images/welcome-banner.svg" width="458" height="352">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
-        <!--можно подумать-->
       </section>
       <section class="about">
         <header class="about-text">
@@ -116,18 +114,20 @@
         </article>
       </section>
     </main>
-    <footer>
-      <h2 class="visually-hidden">Контакты</h2>
-      <h3 class="visually-hidden">Следите за последними обновлениями и поддерживайте связь с нами</h3>
-      <address class="contact-info">
-        <ul class="social-links">
+    <footer class="page-footer">
+        <div class="contact-heading">
+            <h2 class="visually-hidden">Контакты</h2>
+            <h3 class="visually-hidden">Следите за последними обновлениями и поддерживайте связь с нами</h3>
+        </div>  
+      <ul class="social-links">
           <li class="social-links__item"><a href="#">Вк</a></li>
           <li class="social-links__item"><a href="#">Телеграм</a></li>
           <li class="social-links__item"><a href="#">YouTube</a></li>
         </ul>
+      <address class="contact-info">
         <a href="tel:+78128121212" class="phone-num">+7 (812) 812-12-12</a>
-        <a href="#"><img src="./images/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="115" height="33">HTML Academy</a>
       </address>
+        <a href="#"><img src="./images/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="115" height="33">HTML Academy</a>
     </footer>
   </body>
 </html>
