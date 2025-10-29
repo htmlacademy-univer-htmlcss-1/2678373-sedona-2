@@ -11,9 +11,21 @@
         font-style: normal;
         font-weight: 700;
 }
+html, body {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
 body {
-   font-family: "PT Sans", sans-serif;
-   color: #000;
+    font-family: "PT Sans", sans-serif;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+}
+.main-content {
+    flex-grow: 1;
+    background-color: #fff;
 }
 a {
     text-decoration: none;
@@ -191,7 +203,11 @@ input[type="text"] {
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #656565;
+    background-size: cover;
     color: #fff;
+
+    padding: 35px 70px;
+
 }
 .chekbox-text { 
     font-size: 18px;
@@ -209,4 +225,103 @@ input[type="text"] {
 }
 .list-item h3 {
     text-transform: none;
+}
+.heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+.heading-navigation {
+    margin-right: auto;
+}
+ul.about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+.about-list__card {
+    width: 400px;
+    height: 385px;
+}
+.about-list__card-img {
+    display: block;
+    width: 800px;
+    height: 385px;
+}
+.advantages-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+.advantages-list__card {
+    width: 400px;
+    height: 385px;
+}
+.page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    background-color: #fff;
+}
+.contact-heading {
+    display: flex;
+    width: 100%;;
+}
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+.filter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.filter-group legend {
+    margin-bottom: 32px;
+}
+.options-list {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 0;
+}
+.options-list li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.filter-group--price {
+    width: 288px;
+}
+.options-list-buttons {
+    display: flex;
+    gap: 2px;
+    padding-left: 0;
+}
+.cards-container__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 70px;
+}
+.list-item {
+    width: 340px;
+    height: 438px;
+}
+.sorting-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
 }
