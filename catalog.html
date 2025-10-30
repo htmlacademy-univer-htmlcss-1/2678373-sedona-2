@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="heading">
-      <a href="#" class="heading__logo"><img src="./images/header-logo.svg" alt="Логотип Седоны" loading="lazy" width="138" height="64"></a>
+      <a href="#" class="heading__logo"><img src="./images/header-logo.svg" alt="Логотип Седоны" loading="lazy" width="138" height="70" class="heading__logo-img"></a>
       <nav class="heading-navigation">
           <ul class="navigation-links">
               <li class="navigation-links__link"><a class="head4" href="#">Главная</a></li>
@@ -17,18 +17,18 @@
               <li class="navigation-links__link"><a class="head4" href="catalog.html">Гостиницы</a></li>
           </ul>
       </nav>
-      <ul>
-       <li><button class="heading__btn-search">Поиск гостиницы</button></li>
-      <li><button class="heading__btn-fav">Избранное</button></li>
-      <li><a class="heading__btn-action btn btn-basic">Хочу сюда!</a></li>
+      <ul class="additional-btns">
+        <li><button class="heading__btn-search"><span class="visually-hidden">Поиск гостиницы</span></button></li>
+        <li><button class="heading__btn-fav"><span class="visually-hidden">Избранное</span></button></li>
+        <li><a class="heading__btn-action btn btn-basic">Хочу сюда!</a></li>
       </ul>
     </header>
     <main class="main-content">
         <section class="filter-section">
-            <h1 class="filter__heading">Гостиницы Седоны</h1>
+            <h1 class="filter__heading head1">Гостиницы Седоны</h1>
             <ul class="breadcrumps">
-                <li><a href="#" class="breadcrumps__link">Главная</a></li>
-                <li><a href="#" class="breadcrumps__link">Гостиницы</a></li>
+                <li><a href="#" class="breadcrumps__link small-text">Главная</a></li>
+                <li><a href="#" class="breadcrumps__link small-text">Гостиницы</a></li>
             </ul>
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter-group">
@@ -93,9 +93,9 @@
                 </select> 
                 <!--Кнопки лейаута-->
                 <ul class="heading-layout-buttons">
-                    <li><button>Таблица</button></li>
-                    <li><button>Карточки</button></li>
-                    <li><button>Список</button></li>
+                    <li><button class="layout-btn"><span class="visually-hidden">Таблица</span></button></li>
+                    <li><button class="layout-btn"><span class="visually-hidden">Карточки</span></button></li>
+                    <li><button class="layout-btn"><span class="visually-hidden">Список</span></button></li>
                 </ul>
             </header>
                 <ul class="cards-container__list">
@@ -172,18 +172,20 @@
                     </li>
                 </ul>
             <ul class="pagination_buttons">
-                <li><a href="#" class="btn btn-extra">1</a></li>
-                <li><a href="#" class="btn btn-extra">2</a></li>
-                <li><a href="#" class="btn btn-extra">3</a></li>
-                <li><a href="#" class="btn btn-extra">4</a></li>
+                <li><a href="#" class="pag-btn btn btn-extra btn-big">1</a></li>
+                <li><a href="#" class="pag-btn btn btn-extra btn-big">2</a></li>
+                <li><a href="#" class="pag-btn btn btn-extra btn-big">3</a></li>
+                <li><a href="#" class="pag-btn btn btn-extra btn-big">4</a></li>
             </ul>
         </section>
-        <article class="suggests__section-subscribe">
-          <h3 class="suggests__heading-white head2">Подпишитесь на рассылку</h3>
-          <p class="suggests__text-white heading-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <article class="suggests__section-subscribe white-container">
+          <header class="suggests-text">
+            <h3 class="suggests__heading-white head2">Подпишитесь на рассылку</h3>
+            <p class="suggests__text-white heading-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          </header>
           <form class="suggests__form" method="post">
-            <input type="text" placeholder="Ваш e-mail">
-            <input type="submit" value="Подписаться" class="btn btn-extra">
+            <input type="text" placeholder="Ваш e-mail" id="email" name="email" class="email-input" >
+            <input type="submit" value="Подписаться" class="btn btn-extra btn-big" id="subscribe-btn">
           </form>
         </article>
     </main>
@@ -193,14 +195,14 @@
             <h3 class="visually-hidden">Следите за последними обновлениями и поддерживайте связь с нами</h3>
         </div>  
       <ul class="social-links">
-          <li class="social-links__item"><a href="#">Вк</a></li>
-          <li class="social-links__item"><a href="#">Телеграм</a></li>
-          <li class="social-links__item"><a href="#">YouTube</a></li>
+          <li class="social-links__item"><a href="#" class="social-link"><span class="visually-hidden">Вк</span></a></li>
+          <li class="social-links__item"><a href="#" class="social-link"><span class="visually-hidden">Телеграм</span></a></li>
+          <li class="social-links__item"><a href="#" class="social-link"><span class="visually-hidden">YouTube</span></a></li>
         </ul>
       <address class="contact-info">
         <a href="tel:+78128121212" class="phone-num">+7 (812) 812-12-12</a>
       </address>
-        <a href="#"><img src="./images/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="115" height="33">HTML Academy</a>
+        <a href="#"><img src="./images/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="115" height="33"><span class="visually-hidden">HTML Academy</span></a>
     </footer>
 </body>
 </html>
