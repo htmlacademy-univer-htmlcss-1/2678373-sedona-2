@@ -11,9 +11,7 @@
         font-style: normal;
         font-weight: 700;
 }
-* {
-    box-sizing: border-box;
-}
+
 html, body {
     height: 100%;
     margin: 0 auto;
@@ -63,6 +61,7 @@ ul {
     font-size: 60px;
     line-height: 78px;
     font-weight: 700;
+    margin: 0;
 }
 .head2 {
     font-size:30px;
@@ -272,6 +271,7 @@ input[type="text"]:hover {
     justify-content: space-between;
     align-items: center;
     padding: 102px 85px;
+    box-sizing: border-box;
 }
 .about-text  {
     display: flex;
@@ -392,6 +392,7 @@ ul.about {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
 }
 .page-footer {
     display: flex;
