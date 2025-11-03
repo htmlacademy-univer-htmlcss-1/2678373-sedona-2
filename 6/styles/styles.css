@@ -11,9 +11,7 @@
         font-style: normal;
         font-weight: 700;
 }
-* {
-    box-sizing: border-box;
-}
+
 html, body {
     height: 100%;
     margin: 0 auto;
@@ -63,12 +61,14 @@ ul {
     font-size: 60px;
     line-height: 78px;
     font-weight: 700;
+    margin: 0;
 }
 .head2 {
     font-size:30px;
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
 }
 .head3 {
     font-size: 24px;
@@ -250,6 +250,7 @@ input[type="text"]:hover {
     padding: 0;
     width: 44px;
     height: 36px;
+    background-color: #fff;
 }
 
 /* Иконки для кнопок в навигации */
@@ -270,6 +271,16 @@ input[type="text"]:hover {
     justify-content: space-between;
     align-items: center;
     padding: 102px 85px;
+    box-sizing: border-box;
+}
+.about-text  {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.about-text__heading, .about-text__paragraph {
+    display: inline-block;
+    margin: 0;
 }
 .about-list__card-heading, .about-list__card-text {
     display: inline-block;
@@ -317,17 +328,16 @@ input[type="text"]:hover {
     justify-content: space-between;
     gap: 30px;
     padding: 0 70px;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
 }
 .heading__logo {
-    position: relative;
     display: inline-block;
     width: 138px;
+    height: 64px;
 }
-.heading__logo-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+
 .navigation-links {
     display: flex;
     align-items: center;
@@ -382,6 +392,7 @@ ul.about {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
 }
 .page-footer {
     display: flex;
@@ -406,10 +417,17 @@ ul.about {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.filter__heading {
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 8px;
+}
 .filter-group {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 0;
+    margin: 0;
 
 }
 .filter-group legend {
@@ -505,12 +523,17 @@ ul.about {
     justify-content: flex-start;
 }
 .pag-btn {
-    display: inline-block;
+    display: block;
     line-height: 60px;
     text-align: center;
     padding: 0;
     width: 60px;
     height: 60px;
+    box-sizing: border-box;
+}
+.active-page {
+    background-color: #F2F2F2;
+    color: #000;
 }
 .white-container {
     background: none;
