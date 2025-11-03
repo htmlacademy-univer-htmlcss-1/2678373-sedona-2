@@ -272,6 +272,15 @@ input[type="text"]:hover {
     align-items: center;
     padding: 102px 85px;
 }
+.about-text  {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.about-text__heading, .about-text__paragraph {
+    display: inline-block;
+    margin: 0;
+}
 .about-list__card-heading, .about-list__card-text {
     display: inline-block;
     margin: 0;
