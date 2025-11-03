@@ -69,6 +69,7 @@ ul {
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
 }
 .head3 {
     font-size: 24px;
