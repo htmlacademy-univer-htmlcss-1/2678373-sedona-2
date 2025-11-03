@@ -75,29 +75,34 @@ ul {
     line-height: 28px;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
 }
 .heading-text {
     font-size: 22px;
     line-height: 26px;
     font-weight: 400;
     color: #333333;
+    margin: 0;
 }
 .card-text {
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
     color: #333333;
+    margin: 0;
 }
 .card-text-white {
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
     color: #fff;
+    margin: 0;
 }
 .head4 {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
+    margin: 0;
 }
 a.head4 {
     color: #000;
@@ -201,10 +206,14 @@ a.head4 {
 .suggests__section-subscribe p, .suggests__section-subscribe h3 {
     color: #fff;
 }
-.suggests-text {
+.suggests-subscrbe-text {
     max-width: 475px;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 54px;
 }
 .about-text {
     max-width: 660px;
@@ -224,9 +233,20 @@ a.head4 {
     max-width: 590px;
     margin: 0 auto;
 }
+.suggests-heading-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 54px;
+}
 .advantages-text {
     text-align: center;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0  auto;
+    gap: 20px;
     padding-top: 64px;
     padding-bottom: 64px;
     max-width: 505px;
@@ -485,7 +505,8 @@ ul.about {
     padding-bottom: 40px;
 }
 .sort-select {
-    padding: 14px 20px;
+    box-sizing: border-box;
+    padding: 12px 20px;
     min-width: 290px;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -499,6 +520,7 @@ ul.about {
     outline: none;
 }
 .heading-layout-buttons {
+    box-sizing: border-box;
     display: flex;
     gap: 8px;
     margin-left: auto;
