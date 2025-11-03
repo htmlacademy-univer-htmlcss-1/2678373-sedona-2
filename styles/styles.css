@@ -523,12 +523,13 @@ ul.about {
     justify-content: flex-start;
 }
 .pag-btn {
-    display: inline-block;
+    display: block;
     line-height: 60px;
     text-align: center;
     padding: 0;
     width: 60px;
     height: 60px;
+    box-sizing: border-box;
 }
 .white-container {
     background: none;
