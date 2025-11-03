@@ -531,6 +531,10 @@ ul.about {
     height: 60px;
     box-sizing: border-box;
 }
+.active-page {
+    background-color: #F2F2F2;
+    color: #000;
+}
 .white-container {
     background: none;
 }
