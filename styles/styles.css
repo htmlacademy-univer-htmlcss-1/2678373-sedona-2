@@ -250,6 +250,7 @@ input[type="text"]:hover {
     padding: 0;
     width: 44px;
     height: 36px;
+    background-color: #fff;
 }
 
 /* Иконки для кнопок в навигации */
@@ -317,6 +318,7 @@ input[type="text"]:hover {
     justify-content: space-between;
     gap: 30px;
     padding: 0 70px;
+    background-color: #fff;
 }
 .heading__logo {
     position: relative;
