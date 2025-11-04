@@ -474,14 +474,67 @@ ul.about {
     padding-left: 0;
 }
 .cards-container__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
     padding: 0 70px;
 }
 .list-item {
     width: 340px;
     height: 438px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #E6E6E6;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 20px;
+    grid-template-areas: 
+        "img img"
+        "head head"
+        "type price"
+        "buttons buttons"
+        "stars rating"; 
+}
+.list-item__buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.list-item__image {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+}
+.list-item__name {
+    grid-area: head;
+}
+.list-item__type {
+    grid-area: type;
+}
+.list-item__price {
+    grid-area: price;
+    justify-self: end;
+}
+.list-item__button-fav > button {
+    width: 100%;
+    padding: 8px 0;
+}
+.list-item__button-more > button {
+    width: 100%;
+    padding: 8px 0;
+}
+.list-item__rate {
+    grid-area: rating;
+    margin: 0;
+    padding: 8px 22px;
+    background-color: #F2F2F2;
+    border-radius: 4px;
 }
 .sorting-heading {
     display: flex;
