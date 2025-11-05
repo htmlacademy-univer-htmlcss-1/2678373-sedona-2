@@ -481,8 +481,6 @@ ul.about {
     padding: 0 70px;
 }
 .list-item {
-    width: 340px;
-    height: 438px;
     box-sizing: border-box;
     border-radius: 4px;
     border: 1px solid #E6E6E6;
@@ -508,11 +506,10 @@ ul.about {
 
 .list-item__image {
     grid-area: img;
-    width: 100%;
-    height: auto;
 }
 .list-item__name {
     grid-area: head;
+    overflow-wrap: anywhere;
 }
 .list-item__type {
     grid-area: type;
