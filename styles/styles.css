@@ -293,6 +293,7 @@ input[type="text"]:hover {
     padding: 102px 85px;
     box-sizing: border-box;
 }
+
 .about-text  {
     display: flex;
     flex-direction: column;
@@ -310,11 +311,22 @@ input[type="text"]:hover {
     background-color: #82B3D3;
     color: white;
 }
+.about-list__card:first-child .card-deco, .about-list__card:last-child .card-deco {
+    width: 60px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
 .about-list__card:nth-child(3), .about-list__card:nth-child(5) {
     background-color: rgba(131, 179, 211, 0.12);
 }
 .about-list__card:nth-child(4) {
     background-color: rgba(131, 179, 211, 0.2);
+}
+.about-list__card:nth-child(3) .card-deco, .about-list__card:nth-child(5) .card-deco,
+.about-list__card:nth-child(4) .card-deco {
+    width: 60px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .filter-section {
     background-image: url("../images/filter-bg.jpg");
@@ -363,11 +375,26 @@ input[type="text"]:hover {
     align-items: center;
     flex-wrap: wrap;
 }
+
 .navigation-links__link a { 
     display: inline-block;
     padding: 20px 16px;
     cursor: pointer;
+    position: relative;
 }
+/* выбрано такое решение поскольку оно
+не влияет на высоту хедера по умолчанию */
+.current-page::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 32px);
+    height: 2px;
+    background-color: #756257;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .additional-btns {
     display: flex;
     align-items: center;
@@ -478,7 +505,10 @@ ul.about {
     grid-template-columns: auto auto auto;
     justify-content: center;
     gap: 20px;
-    padding: 0 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 .list-item {
     box-sizing: border-box;
@@ -533,6 +563,13 @@ ul.about {
     background-color: #F2F2F2;
     border-radius: 4px;
 }
+.list-item__stars {
+    grid-area: stars;
+    display: flex;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: center;
+}
 .sorting-heading {
     display: flex;
     align-items: center;
@@ -544,7 +581,47 @@ ul.about {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: #83B3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Селектор сделан так чтобы при наведении на li контейнер
+менялся fill, т.е. увеличиваем активную область */
+.social-link:hover .social-icon {
+  fill: #68A2CA;
+}
+.social-link:focus .social-icon {
+    fill: #68A2CA;
+}
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+.academy-logo:hover .academy-icon {
+    fill: #756157;
+}
+.academy-logo:focus .academy-icon {
+    fill: #756157;
+}
+.academy-logo:active .academy-icon {
+    fill: rgba(117, 97, 87, 0.3);
+}
+.heading__btn-fav {
+    position: relative;
+}
+/* тут есть вопросы по ширине и высоте, я оставил это значение не
+фиксированным чтобы счетчик мог выходить за трехзначное число
+и фон адаптировался под это значение */
+.fav-counter {
+    position: absolute;
+    top: -2px;
+    right: 2px;
+    background-color: #7DB54F;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+    line-height: 10px;
+    font-family: "PT Sans", sans-serif;
 }
 .breadcrumps {
     display: flex;
@@ -553,6 +630,18 @@ ul.about {
     max-width: 80%;
     flex-wrap: wrap;
     padding-bottom: 40px;
+}
+.home-icon {
+    transform: translateY(3px);
+}
+.breadcrumps__link:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+.breadcrumps__link:focus {
+    color: #fff;
+}
+.breadcrumps__link:active {
+    color: rgba(255, 255, 255, 0.3);
 }
 .sort-select {
     box-sizing: border-box;
@@ -581,7 +670,20 @@ ul.about {
 .layout-btn {
     width: 48px;
     height: 48px;
+    border-radius: 4px;
+    border: 2px solid #E5E5E5;
+    background-color: transparent;
 }
+.layout-btn:hover {
+    border-color: #000;
+}
+.layout-btn:focus {
+    border-color: #68A2CA;
+}
+.layout-btn:active {
+    border-color: #000;
+}
+
 .items-container__heading {
     padding-right: 200px;
 }
@@ -593,6 +695,14 @@ ul.about {
     padding: 40px 70px 60px 70px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    box-sizing: border-box;
+}
+.pagination-split {
+    width: calc(100% - 140px);
+    margin: 0 auto;
+    height: 1px;
+    background-color: #E5E5E5;
+    box-sizing: border-box;
 }
 .pag-btn {
     display: block;
@@ -615,4 +725,19 @@ ul.about {
 }
 .white-container h3 {
     color: #000;
+}
+.layout-table {
+    background-image: url("../images/View-table.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.layout-cards {
+    background-image: url("../images/View-slideshow.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.layout-list {
+    background-image: url("../images/View-list.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
