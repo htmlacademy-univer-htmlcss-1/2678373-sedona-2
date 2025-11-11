@@ -11,18 +11,22 @@
         font-style: normal;
         font-weight: 700;
 }
-
 html, body {
     height: 100%;
-    margin: 0 auto;
-    max-width: 1200px;
+    margin: 0;
 }
 body {
     font-family: "PT Sans", sans-serif;
     color: #000;
+    background-color: #F2F2F2;
+}
+.page-container {
     display: flex;
     flex-direction: column;
-    background-color: #F2F2F2;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 button {
     cursor: pointer;
