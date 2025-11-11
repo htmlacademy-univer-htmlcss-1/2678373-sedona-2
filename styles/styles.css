@@ -454,7 +454,7 @@ ul.about {
 }
 .contact-heading {
     display: flex;
-    width: 100%;;
+    width: 100%;
 }
 .social-links {
     display: flex;
@@ -648,7 +648,7 @@ ul.about {
 }
 .sort-select {
     box-sizing: border-box;
-    padding: 12px 20px;
+    padding: 12px 32px 12px 20px;
     min-width: 290px;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -656,6 +656,12 @@ ul.about {
     color: #333333;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
+
+    appearance: none;
+
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 21px center;
 }
 .sort-select:hover, .sort-select:focus {
     border-color: #68A2CA;
