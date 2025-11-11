@@ -11,18 +11,22 @@
         font-style: normal;
         font-weight: 700;
 }
-
 html, body {
     height: 100%;
-    margin: 0 auto;
-    max-width: 1200px;
+    margin: 0;
 }
 body {
     font-family: "PT Sans", sans-serif;
     color: #000;
+    background-color: #F2F2F2;
+}
+.page-container {
     display: flex;
     flex-direction: column;
-    background-color: #F2F2F2;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 button {
     cursor: pointer;
@@ -387,12 +391,11 @@ input[type="text"]:hover {
 .current-page::after {
     content: "";
     position: absolute;
-    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
     height: 2px;
     background-color: #756257;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .additional-btns {
@@ -451,7 +454,7 @@ ul.about {
 }
 .contact-heading {
     display: flex;
-    width: 100%;;
+    width: 100%;
 }
 .social-links {
     display: flex;
@@ -645,7 +648,7 @@ ul.about {
 }
 .sort-select {
     box-sizing: border-box;
-    padding: 12px 20px;
+    padding: 12px 32px 12px 20px;
     min-width: 290px;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -653,6 +656,12 @@ ul.about {
     color: #333333;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
+
+    appearance: none;
+
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 21px center;
 }
 .sort-select:hover, .sort-select:focus {
     border-color: #68A2CA;
