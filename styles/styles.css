@@ -484,7 +484,9 @@ ul.about {
 .filter-group legend {
     margin-bottom: 32px;
 }
-.options-checkbox { 
+.options-checkbox,
+.options-radio
+{ 
     width: 20px;
     height: 20px;
     margin: 0;
@@ -493,19 +495,25 @@ ul.about {
     z-index: 100;
 }
 .options-checkbox:hover ~ .custom-checkbox,
-.options-checkbox:active ~ .custom-checkbox
-{
-    opacity: 0.6;
-}
+.options-checkbox:active ~ .custom-checkbox,
 .options-checkbox:hover ~ .chekbox-text,
 .options-checkbox:active ~ .chekbox-text
 {
     opacity: 0.6;
 }
-.options-checkbox:focus {
+.options-radio:hover ~ .chekbox-text,
+.options-radio:active ~ .chekbox-text,
+.options-radio:hover ~ .custom-radio,
+.options-radio:active ~ .custom-radio
+{
+    opacity: 0.6;
+}
+.options-checkbox:focus,
+.options-radio:focus {
     outline: none;
 }
-.options-checkbox:focus ~ .custom-checkbox {
+.options-checkbox:focus ~ .custom-checkbox,
+.options-radio:focus ~ .custom-radio {
     outline: 3px solid #68A2CA;
 }
 .custom-checkbox { 
@@ -514,6 +522,17 @@ ul.about {
     background-color: white;
     border-radius: 4px;
     position: relative;
+}
+.options-radio:checked ~ .custom-radio::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #3F5E72;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 .options-checkbox:checked ~ .custom-checkbox::after {
     content: url("../images/arrow-checkbox.svg");
@@ -535,6 +554,13 @@ ul.about {
     justify-content: flex-end;
     align-items: center;
     gap:16px;
+}
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
 }
 .filter-group--price {
     width: 288px;
