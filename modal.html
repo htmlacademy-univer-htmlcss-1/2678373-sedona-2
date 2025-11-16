@@ -169,5 +169,45 @@
         </a>
     </footer>
   </div>
+  <div class="modal-layout">
+    <section class="modal">
+      <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+      <a href="index.html" class="modal__close"><span class="visually-hidden">Закрыть</span></a>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+  <fieldset class="form-set">
+    <legend class="head2 modal-title">Поиск гостиницы в Седоне</legend>
+    <ul class="modal__list">
+      <li class="modal__item">
+        <label for="modal-date" class="modal-label head4">Дата Заезда:</label>
+        <input type="date" id="modal-date" name="date" class="date-input">
+      </li>
+
+      <li class="modal__item">
+        <label for="modal-date-leaving" class="modal-label head4">Дата Выезда:</label>
+        <input type="date" id="modal-date-leaving" name="date-leaving" class="date-input">
+      </li>
+
+      <li class="modal__item">
+        <div class="modal-nums">
+          <label for="modal-adults" class="modal-label head4">Взрослые:</label>
+          <input type="number" id="modal-adults" name="adults" class="guests-input" min="1" value="1">
+        </div>
+        <div class="modal-nums">
+            <label for="modal-children" class="modal-label head4 kids">Дети:</label>
+            <input type="number" id="modal-children" name="children" class="guests-input" min="0" value="0">
+            <p class="tooltip-info">
+              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            </p>
+        </div>
+      </li>
+      <li class="modal-item">
+      <input type="submit" value="НАЙТИ" class="btn btn-extra btn-big modal-submit">
+      </li>
+    </ul>
+
+  </fieldset>
+</form>
+    </section>
+  </div>
   </body>
 </html>

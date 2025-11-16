@@ -59,7 +59,7 @@
                             <span class="custom-checkbox"></span>
                         </li>
                         <li>
-                            <input type="checkbox" name="wifi" id="wifi" class="options-checkbox">
+                            <input type="checkbox" name="wifi" id="wifi" class="options-checkbox" checked>
                             <label for="wifi" class="chekbox-text">Wi-Fi</label>
                             <span class="custom-checkbox"></span>
                         </li>
@@ -70,7 +70,7 @@
                    <legend class="filter-group__heading head4">Тип жилья:</legend>
                         <ul class="options-list">
                             <li>
-                                <input type="radio" id="hostel" name="type" value="hostel" class="options-radio">
+                                <input type="radio" id="hostel" name="type" value="hostel" class="options-radio" checked>
                                 <label for="hostel" class="chekbox-text">Гостиница</label>
                                 <span class="custom-radio"></span>
                             </li>
@@ -89,10 +89,15 @@
                 <fieldset class="filter-group filter-group--price">
                     <legend class="filter-group__heading head4">Стоимость, ₽:</legend>
                     <ul class="options-list-buttons">   
-                        <li><input type="number" placeholder="От" name="form"></li>
-                        <li><input type="number" placeholder="До" name="under"></li>
+                        <li><input type="number" placeholder="от" name="form" class="price-form from-price" value="1000"></li>
+                        <li><input type="number" placeholder="до" name="under" class="price-form under-price" value="9000"></li>
                     </ul>
-                    
+                    <div class="price-slider">
+                        <div class="price-pool-line" style="left: 10px; right: 40px;">
+                            <button class="slider-btn min-price-btn"></button>
+                            <button class="slider-btn max-price-btn"></button>
+                        </div>
+                    </div>
                 </fieldset>
                 <div class="filter-group">
                     <input type="submit" value="Применить" class="btn btn-extra">
