@@ -177,14 +177,16 @@
   <fieldset class="form-set">
     <legend class="head2 modal-title">Поиск гостиницы в Седоне</legend>
     <ul class="modal__list">
-      <li class="modal__item">
+      <li class="modal__item date-container">
         <label for="modal-date" class="modal-label head4">Дата Заезда:</label>
         <input type="date" id="modal-date" name="date" class="date-input">
+        <p class="modal-date-tooltip invalid">Мы не можем отправить вас в прошлое.</p>
       </li>
 
-      <li class="modal__item">
+      <li class="modal__item date-container">
         <label for="modal-date-leaving" class="modal-label head4">Дата Выезда:</label>
         <input type="date" id="modal-date-leaving" name="date-leaving" class="date-input">
+        <p class="modal-date-tooltip valid">На эти даты есть свободные номера. Пока есть.</p>
       </li>
 
       <li class="modal__item">

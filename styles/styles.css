@@ -972,12 +972,34 @@ input[type="number"] {
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
+    font-weight: 700;
+    font-family: inherit;
 }
 
 .date-input {
     flex-grow: 1;
     max-width: 440px;
     box-sizing: border-box;
+}
+.date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
+.date-container {
+    position: relative;
+}
+.date-container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    background-image: url("../images/date.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
 }
 .modal-nums {
     display: flex;
@@ -989,6 +1011,21 @@ input[type="number"] {
 .modal-submit {
     width: 100%;
 }
+.modal-date-tooltip {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    top: 36px;
+    left: 158px;
+}
+.valid {
+    color:#333
+}
+.invalid {
+    color: #FF5757;
+}
+
 .modal-title {
     margin-bottom: 64px;
 }
