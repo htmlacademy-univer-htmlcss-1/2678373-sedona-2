@@ -46,6 +46,7 @@
                 
             </ul>
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+                <div class="filter-parameters">
                 <fieldset class="filter-group">
                     <legend class="filter-group__heading head4">Инфраструктура:</legend>
                     <ul class="options-list">
@@ -87,22 +88,25 @@
                             </li>
                         </ul>
                 </fieldset>
+                </div>
+                <div class="filter-parameters">
                 <fieldset class="filter-group filter-group--price">
                     <legend class="filter-group__heading head4">Стоимость, ₽:</legend>
                     <ul class="options-list-buttons">   
-                        <li><input type="number" placeholder="от" name="form" class="price-form from-price" value="1000"></li>
+                        <li><input type="number" placeholder="от" name="form" class="price-form from-price" value="0"></li>
                         <li><input type="number" placeholder="до" name="under" class="price-form under-price" value="9000"></li>
                     </ul>
                     <div class="price-slider">
-                        <div class="price-pool-line" style="left: 10px; right: 40px;">
-                            <button class="slider-btn min-price-btn"></button>
-                            <button class="slider-btn max-price-btn"></button>
+                        <div class="price-pool-line" style="left: 0; right: 70px;">
+                            <button class="slider-btn min-price-btn" type="button"></button>
+                            <button class="slider-btn max-price-btn" type="button"></button>
                         </div>
                     </div>
                 </fieldset>
-                <div class="filter-group">
+                <div class="filter-group filter-group--buttons">
                     <input type="submit" value="Применить" class="btn btn-extra">
                     <input type="reset" value="Сбросить" class="btn btn-transparent">
+                </div>
                 </div>
             </form>
         </section>

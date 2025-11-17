@@ -259,7 +259,8 @@ a.head4 {
 
 input[type="text"],
 input[type="date"],
-input[type="number"] {
+.guests-input
+ {
     background-color: #F2F2F2;
     border: none;
     border-radius: 4px;
@@ -346,7 +347,16 @@ input[type="text"]:hover {
     padding: 35px 70px 70px 70px;
 
 }
-.chekbox-text { 
+.filter-parameters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+.filter-group__heading {
+    padding-inline: 0;
+}
+
+.chekbox-text {
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
@@ -575,6 +585,7 @@ ul.about {
     line-height: 24px;
     max-width: 143px;
     padding: 12px 20px;
+    box-sizing: border-box;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -606,6 +617,13 @@ input[type="number"] {
 }
 .filter-group--price {
     width: 288px;
+    justify-content: space-between;
+    min-height: 152px;
+}
+.filter-group--buttons {
+    width: 191px;
+    justify-content: flex-end;
+    gap: 32px;
 }
 .options-list-buttons {
     display: flex;
@@ -613,11 +631,11 @@ input[type="number"] {
     padding-left: 0;
 }
 .price-slider {
-    margin-top: 50px;
     width: 287px;
     height: 4px;
     background-color: rgba(255, 255, 255, 0.3);
     position: relative;
+    margin-bottom: 8px;
 }
 
 .price-pool-line {
@@ -952,12 +970,36 @@ input[type="number"] {
     max-width: 110px;
     box-sizing: border-box;
     text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: 700;
+    font-family: inherit;
 }
 
 .date-input {
     flex-grow: 1;
     max-width: 440px;
     box-sizing: border-box;
+}
+.date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
+.date-container {
+    position: relative;
+}
+.date-container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    background-image: url("../images/date.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
 }
 .modal-nums {
     display: flex;
@@ -969,35 +1011,56 @@ input[type="number"] {
 .modal-submit {
     width: 100%;
 }
+.modal-date-tooltip {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    top: 36px;
+    left: 158px;
+}
+.valid {
+    color:#333
+}
+.invalid {
+    color: #FF5757;
+}
+
 .modal-title {
     margin-bottom: 64px;
 }
 .modal-nums {
     position: relative;
 }
-.modal-nums::after {
+.modal-btn-plus {
     content: '';
     position: absolute;
-    right: 10px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 100%;
     background-image: url("../images/cross.svg");
     background-repeat: no-repeat;
     background-position: center center;
+    border: none;
+    background-color: transparent;
+    padding: 0;
 }
-.modal-nums::before {
+.modal-btn-minus {
     content: '';
     position: absolute;
-    right: 80px;
+    right: 70px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 100%;
     background-image: url("../images/minus.svg");
     background-repeat: no-repeat;
     background-position: center center;
+    border: none;
+    background-color: transparent;
+    padding: 0;
 }
 .modal-nums {
     position: relative;

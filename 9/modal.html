@@ -178,24 +178,30 @@
   <fieldset class="form-set">
     <legend class="head2 modal-title">Поиск гостиницы в Седоне</legend>
     <ul class="modal__list">
-      <li class="modal__item">
+      <li class="modal__item date-container">
         <label for="modal-date" class="modal-label head4">Дата Заезда:</label>
         <input type="date" id="modal-date" name="date" class="date-input">
+        <p class="modal-date-tooltip invalid">Мы не можем отправить вас в прошлое.</p>
       </li>
 
-      <li class="modal__item">
+      <li class="modal__item date-container">
         <label for="modal-date-leaving" class="modal-label head4">Дата Выезда:</label>
         <input type="date" id="modal-date-leaving" name="date-leaving" class="date-input">
+        <p class="modal-date-tooltip valid">На эти даты есть свободные номера. Пока есть.</p>
       </li>
 
       <li class="modal__item">
         <div class="modal-nums">
+          <button class="modal-btn-minus" type="button"></button>
           <label for="modal-adults" class="modal-label head4">Взрослые:</label>
           <input type="number" id="modal-adults" name="adults" class="guests-input" min="1" value="1">
+          <button class="modal-btn-plus" type="button"></button>
         </div>
         <div class="modal-nums">
+          <button class="modal-btn-minus" type="button"></button>
             <label for="modal-children" class="modal-label head4 kids">Дети:</label>
             <input type="number" id="modal-children" name="children" class="guests-input" min="0" value="0">
+            <button class="modal-btn-plus" type="button"></button>
             <p class="tooltip-info">
               Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
             </p>
