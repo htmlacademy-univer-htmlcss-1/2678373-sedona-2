@@ -45,20 +45,24 @@
                 
             </ul>
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+                <div class="filter-parameters">
                 <fieldset class="filter-group">
                     <legend class="filter-group__heading head4">Инфраструктура:</legend>
                     <ul class="options-list">
                         <li>
+                            <input type="checkbox" id="pool" name="pool" class="options-checkbox">
                             <label for="pool" class="chekbox-text">Бассейн</label>
-                            <input type="checkbox" id="pool" name="pool">
+                            <span class="custom-checkbox"></span>
                         </li>
                         <li>
+                            <input type="checkbox" name="parking" id="parking" class="options-checkbox">
                             <label for="parking" class="chekbox-text">Парковка</label>
-                            <input type="checkbox" name="parking" id="parking">
+                            <span class="custom-checkbox"></span>
                         </li>
                         <li>
+                            <input type="checkbox" name="wifi" id="wifi" class="options-checkbox" checked>
                             <label for="wifi" class="chekbox-text">Wi-Fi</label>
-                            <input type="checkbox" name="wifi" id="wifi">
+                            <span class="custom-checkbox"></span>
                         </li>
                     </ul>
 
@@ -67,30 +71,41 @@
                    <legend class="filter-group__heading head4">Тип жилья:</legend>
                         <ul class="options-list">
                             <li>
+                                <input type="radio" id="hostel" name="type" value="hostel" class="options-radio" checked>
                                 <label for="hostel" class="chekbox-text">Гостиница</label>
-                                <input type="radio" id="hostel" name="type" value="hostel">
+                                <span class="custom-radio"></span>
                             </li>
                             <li>
+                                <input type="radio" name="type" id="motel" value="motel" class="options-radio">
                                 <label for="motel" class="chekbox-text">Мотель</label>
-                                <input type="radio" name="type" id="motel" value="motel">
+                                <span class="custom-radio"></span>
                             </li>
                             <li>
+                                <input type="radio" name="type" id="aparts" value="aparts" class="options-radio">
                                 <label for="aparts" class="chekbox-text">Апартаменты</label>
-                                <input type="radio" name="type" id="aparts" value="aparts">
+                                <span class="custom-radio"></span>
                             </li>
                         </ul>
                 </fieldset>
+                </div>
+                <div class="filter-parameters">
                 <fieldset class="filter-group filter-group--price">
                     <legend class="filter-group__heading head4">Стоимость, ₽:</legend>
                     <ul class="options-list-buttons">   
-                        <li><input type="number" placeholder="От" name="form"></li>
-                        <li><input type="number" placeholder="До" name="under"></li>
+                        <li><input type="number" placeholder="от" name="form" class="price-form from-price" value="0"></li>
+                        <li><input type="number" placeholder="до" name="under" class="price-form under-price" value="9000"></li>
                     </ul>
-                    
+                    <div class="price-slider">
+                        <div class="price-pool-line" style="left: 0; right: 70px;">
+                            <button class="slider-btn min-price-btn" type="button"></button>
+                            <button class="slider-btn max-price-btn" type="button"></button>
+                        </div>
+                    </div>
                 </fieldset>
-                <div class="filter-group">
+                <div class="filter-group filter-group--buttons">
                     <input type="submit" value="Применить" class="btn btn-extra">
                     <input type="reset" value="Сбросить" class="btn btn-transparent">
+                </div>
                 </div>
             </form>
         </section>
